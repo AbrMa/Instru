@@ -1,0 +1,116 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 strtok.save
+022-023 MAIN.LSB
+024-027 MAIN.voltaje
+028-029 @ITOF.P1
+028-02B @PRINTF_L32D_9600_62_63FPFPF.P2
+028     @PSTRINGCN7_9600_62_63.P3
+028     MAIN.@SCRATCH1
+029     @delay_ms1.P1
+029     MAIN.@SCRATCH2
+029     @PSTRINGCN7_9600_62_63.@SCRATCH1
+02A     MAIN.@SCRATCH3
+02A     @PSTRINGCN7_9600_62_63.@SCRATCH2
+02B     MAIN.@SCRATCH4
+02B     @PSTRINGCN7_9600_62_63.@SCRATCH3
+02C-02F @DIVFF.P1
+02C     @PRINTF_L32D_9600_62_63FPFPF.P2
+02D     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+02E     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+02F     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+030-033 @DIVFF.P1
+030     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+031     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+032     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+033     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+034     @DIVFF.@SCRATCH1
+034     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+035-038 @FTOSD.P1
+035-038 @MULFF.P2
+035-038 @DIV3232.P3
+035     @DIVFF.@SCRATCH2
+036     @DIVFF.@SCRATCH3
+037     @DIVFF.@SCRATCH4
+038     @DIVFF.@SCRATCH5
+039-03C @DIV3232.P1
+039-03C @MULFF.P2
+039     @DIVFF.@SCRATCH6
+039     @FTOSD.@SCRATCH1
+03D     @MULFF.@SCRATCH1
+03D     @DIV3232.@SCRATCH1
+03E     @MULFF.@SCRATCH2
+03E     @DIV3232.@SCRATCH2
+03F     @MULFF.@SCRATCH3
+03F     @DIV3232.@SCRATCH3
+040     @MULFF.@SCRATCH4
+040     @DIV3232.@SCRATCH4
+041     @MULFF.@SCRATCH5
+041     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0011  @delay_ms1
+0309  MAIN
+0028  @ITOF
+0047  @MULFF
+00BC  @DIVFF
+0004  @const173
+0188  @PSTRINGCN7_9600_62_63
+0243  @FTOSD
+01DA  @DIV3232
+021C  @PRINTF_L32D_9600_62_63FPFPF
+0309  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Abraham\Documents\GitHub\Instru\Práctica 3\
+
+Project Files:
+    prac3.c
+    ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f877a.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+
+Units:
+    C:\Users\Abraham\Documents\GitHub\Instru\Práctica 3\prac3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      prac3.err
+    Ext Symbols: prac3.esym
+    INHX8:       prac3.hex
+    Symbols:     prac3.sym
+    List:        prac3.lst
+    Debug/COFF:  prac3.cof
+    Project:     prac3.PJT
+    Call Tree:   prac3.tre
+    Statistics:  prac3.sta

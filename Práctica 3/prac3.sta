@@ -1,0 +1,58 @@
+
+ROM used: 922 (11%)
+          922 (11%) including unused fragments
+
+          1 Average locations per line
+          7 Average locations per statement
+
+RAM used: 17 (5%) at main() level
+          39 (11%) worst case
+
+Stack used: 2 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   23     9   7  prac3.c
+  326     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f877a.h
+   37     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+  409   121  93  ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+   28     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+----- -----
+  851   130 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     23   2   1             @delay_ms1
+0    145  16  10   244  3.4  MAIN
+0     31   3   2             @ITOF
+0    117  13  13             @MULFF
+0    204  22  14             @DIVFF
+0     13   1   0             @const173
+0     82   9   4             @PSTRINGCN7_9600_62_63
+ Inline        5             @FTOSD
+0     66   7  13             @DIV3232
+0    237  26  13             @PRINTF_L32D_9600_62_63FPFPF
+
+Program metrics:
+    Functions               1
+    Statements              130
+    Comments                257
+    Volume (V)              260
+    Difficilty (D)          2.5
+    Effort to implement (E) 655
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    48
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   918  1126  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

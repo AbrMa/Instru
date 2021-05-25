@@ -1,0 +1,13 @@
+읕prac3
+   읕MAIN  0/145  Ram=10
+      쳐??0??
+      쳐@delay_ms1  0/23  Ram=1
+      쳐@ITOF  0/31  Ram=2
+      쳐@MULFF  0/117  Ram=13
+      쳐@DIVFF  0/204  Ram=14
+      쳐@PSTRINGCN7_9600_62_63  0/82  Ram=4
+      읕@PRINTF_L32D_9600_62_63FPFPF  0/237  Ram=13
+         쳐@MULFF  0/117  Ram=13
+         쳐@FTOSD  (Inline)  Ram=5
+         쳐@DIV3232  0/66  Ram=13
+         읕@DIV3232  0/66  Ram=13
