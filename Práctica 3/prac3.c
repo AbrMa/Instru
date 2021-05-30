@@ -7,7 +7,7 @@
 
 void main () {
    int16 LSB;
-   float voltaje;
+   float voltaje, HS;
    
    setup_adc_ports(all_analog);
    setup_adc(ADC_CLOCK_internal);
@@ -17,6 +17,7 @@ void main () {
       delay_ms(1000);
       LSB = read_adc();
       voltaje = (LSB * 5.0) / 1023.0;
-      printf("Valor en voltaje %2.2f \r\n", voltaje);
+      HS = voltaje * (85.0/4.9) + 10;
+      printf("Porciento HS %2.2f \r\n", HS);
    }
 }
