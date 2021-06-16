@@ -1,0 +1,25 @@
+[PROJECT]
+Target=Sensor us.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=Sensor us.c
+[Sensor us.c]
+Type=4
+[mru-list]
+1=Sensor us.c
+[Units]
+Count=1
+1=Sensor us (main)
+
+[ProjectLog]
+Days=1
+D1=15-06-2021
+D1_L=2
+D1_L1=[76342]Stopped Editing.
+TotalEdit=21
+TotalDebug=0
+D1_E=21
+D1_D=0
+D1_L2=[76988]Project Closed.
