@@ -1,0 +1,65 @@
+
+ROM used: 1829 (22%)
+          1829 (22%) including unused fragments
+
+          1 Average locations per line
+          5 Average locations per statement
+
+RAM used: 21 (6%) at main() level
+          57 (15%) worst case
+
+Stack used: 2 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   26    11   3  temperatura.c
+  326     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f877a.h
+   37     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+  409   121  31  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+   28     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+ 2172   260  66  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+----- -----
+ 3026   392 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+ Inline       20  1124 10.7  CEIL_FLOOR
+0     63   3  10             @FLT
+0     31   2   4   345  3.5  @SFTOI
+0     29   2   2             @ITOF
+0    202  11  14             @DIVFF
+0    321  18  16             @ADDFF
+0    117   6  13             @MULFF
+0    412  23   4    43  2.1  floor
+0     23   1   1             @delay_ms1
+0    220  12  14   345  3.5  MAIN
+0     15   1   0             @const301
+0     80   4   4             @PSTRINGCN7_9600_62_63
+ Inline        5             @FTOSD
+0     66   4  13             @DIV3232
+0    235  13  13             @PRINTF_L32D_9600_62_63FPFPF
+0     11   1   0             @const312
+
+Program metrics:
+    Functions               4
+    Statements              392
+    Comments                505
+    Volume (V)              2391
+    Difficilty (D)          18.5
+    Effort to implement (E) 44249
+    Time to implement (T)   41 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   8
+    Maintainability (MI)    13
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1825  219  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+
