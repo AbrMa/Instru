@@ -1,0 +1,78 @@
+#include <16f877a.h> // biblioteca del micro
+#device adc=10 //adc de 10 bits
+#include <stdio.h> //input output c
+#include <math.h> //floor 
+#fuses XT, NOWDT, NOPROTECT, NOLVP, PUT, BROWNOUT
+#use delay (clock = 4MHz) // XT = 4MHz
+#use rs232 (baud = 9600, parity = N, xmit = pin_c6, rcv = pin_c7, bits = 8 ) // configuración del puerto serial
+
+#define echo PIN_B0
+#define trigger PIN_B1
+
+void main () {
+
+   float distancia, voltajeTemperatura, temperatura, voltajeHS, HS;
+   double tiempo;
+   int16 duty, LSB;
+   int Timer2, poscaler;
+
+   setup_adc_ports(all_analog);
+   setup_adc(ADC_CLOCK_internal);
+
+   setup_timer_1(T1_internal|T1_div_by_1);
+   Timer2=249;
+
+   poscaler=1;
+   set_tris_c(0b11111110);
+   setup_ccp1 (ccp_pwm);
+   duty=0;
+
+   while (true) {
+      printf("-------------------------------\r\n");
+      //Temperatura
+      set_adc_channel(1);
+      delay_us(10);
+      LSB = read_adc();
+      voltajeTemperatura = (LSB * 5.0) / 1023.0;
+      temperatura = 20.0 * voltajeTemperatura;
+      printf("[Temperatura] -> %2.2f \r\n", floor(temperatura));
+
+      //Humedad
+      set_adc_channel(0);
+      delay_us(10);
+      LSB = read_adc();
+      voltajeHS = (LSB * 5.0) / 1023.0;
+      HS = voltajeHS * (85.0/4.9) + 10;
+      printf("[Porciento HS] -> %2.2f \r\n", HS);
+
+      //US
+      set_pwm1_duty(duty);
+
+      output_high(trigger);
+      delay_us(10);
+      output_low(trigger);
+
+      while (!input(echo));
+      set_timer1 (0);
+
+      while (input (echo));
+      tiempo=get_timer1();
+      distancia=(tiempo/2)*(.0343);
+
+      printf("[Distancia] -> %f cm\r\n", distancia);
+      printf("[Tiempo] -> %f seg\r\n", tiempo);
+
+      delay_us(10);
+
+      if (distancia<= (3.5)) {
+         duty=0;
+      }
+      else if ( distancia>=331) {
+         duty=331*3;
+      }
+      else {
+         duty=distancia*3;
+      }
+      delay_us(10);
+   }
+}

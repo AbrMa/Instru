@@ -1,0 +1,163 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 strtok.save
+022     @TRIS_C
+023-026 MAIN.distancia
+027-02A MAIN.voltajeTemperatura
+02B-02E MAIN.temperatura
+02F-032 MAIN.voltajeHS
+033-036 MAIN.HS
+037-03A MAIN.tiempo
+03B-03C MAIN.duty
+03D-03E MAIN.LSB
+03F     MAIN.Timer2
+040     MAIN.poscaler
+041-044 floor.x
+041     MAIN.@SCRATCH1
+041     @PSTRINGC7_9600_62_63.@SCRATCH1
+042     MAIN.@SCRATCH2
+042     @PSTRINGC7_9600_62_63.@SCRATCH2
+043     MAIN.@SCRATCH3
+043     @PSTRINGC7_9600_62_63.@SCRATCH3
+044     MAIN.@SCRATCH4
+045     @PSTRINGCN7_9600_62_63.P1
+045-048 CEIL_FLOOR.x
+045-048 @PRINTF_L32D_9600_62_63FPFPF.P1
+046     @PSTRINGCN7_9600_62_63.@SCRATCH1
+047     @PSTRINGCN7_9600_62_63.@SCRATCH2
+048     @PSTRINGCN7_9600_62_63.@SCRATCH3
+049     CEIL_FLOOR.n
+049     @PRINTF_L32D_9600_62_63FPFPF.P1
+04A-04D CEIL_FLOOR.y
+04A     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+04B     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+04C     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+04D     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+04E-051 CEIL_FLOOR.res
+04E     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+04F     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+050     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+051     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+052-055 @FTOSD.P1
+052-055 @DIV3232.P2
+052-053 CEIL_FLOOR.l
+054.0   CEIL_FLOOR.s
+055-058 @FLT.P1
+055-058 @MULFF.P2
+055-058 @DIVFF.P3
+055-058 @SFTOI.P4
+055     CEIL_FLOOR.@SCRATCH1
+056-059 @DIV3232.P1
+056     CEIL_FLOOR.@SCRATCH2
+056     @FTOSD.@SCRATCH1
+057     CEIL_FLOOR.@SCRATCH3
+058     CEIL_FLOOR.@SCRATCH4
+059-05C @FLT.P1
+059-05A @ITOF.P2
+059-05C @MULFF.P3
+059-05C @ADDFF.P4
+059-05C @DIVFF.P5
+05A     @DIV3232.@SCRATCH1
+05B     @DIV3232.@SCRATCH2
+05C     @DIV3232.@SCRATCH3
+05D-060 @ADDFF.P1
+05D     @FLT.@SCRATCH1
+05D     @DIVFF.@SCRATCH1
+05D     @MULFF.@SCRATCH1
+05D     @DIV3232.@SCRATCH4
+05E     @FLT.@SCRATCH2
+05E     @DIVFF.@SCRATCH2
+05E     @MULFF.@SCRATCH2
+05E     @DIV3232.@SCRATCH5
+05F     @DIVFF.@SCRATCH3
+05F     @MULFF.@SCRATCH3
+060     @DIVFF.@SCRATCH4
+060     @MULFF.@SCRATCH4
+061     @DIVFF.@SCRATCH5
+061     @ADDFF.@SCRATCH1
+061     @MULFF.@SCRATCH5
+062     @DIVFF.@SCRATCH6
+062     @ADDFF.@SCRATCH2
+063     @ADDFF.@SCRATCH3
+064     @ADDFF.@SCRATCH4
+065     @ADDFF.@SCRATCH5
+066     @ADDFF.@SCRATCH6
+067     @ADDFF.@SCRATCH7
+068     @ADDFF.@SCRATCH8
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0395  CEIL_FLOOR
+01ED  @FLT
+022C  @SFTOI
+0091  @ITOF
+0123  @DIVFF
+024B  @ADDFF
+00AE  @MULFF
+038C  floor
+0800  MAIN
+0004  @const309
+0047  @PSTRINGC7_9600_62_63
+0015  @const311
+0528  @PSTRINGCN7_9600_62_63
+05E1  @FTOSD
+0578  @DIV3232
+05BA  @PRINTF_L32D_9600_62_63FPFPF
+0022  @const322
+0030  @const323
+003C  @const324
+0800  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Abraham\Documents\GitHub\Instru\Proyecto final\final\
+
+Project Files:
+    final.c
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f877a.h
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+
+Units:
+    C:\Users\Abraham\Documents\GitHub\Instru\Proyecto final\final\final (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      final.err
+    Ext Symbols: final.esym
+    INHX8:       final.hex
+    Symbols:     final.sym
+    List:        final.lst
+    Debug/COFF:  final.cof
+    Project:     final.PJT
+    Call Tree:   final.tre
+    Statistics:  final.sta
