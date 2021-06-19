@@ -1,0 +1,25 @@
+[PROJECT]
+Target=final.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=final.c
+[final.c]
+Type=4
+[mru-list]
+1=final.c
+[Units]
+Count=1
+1=final (main)
+
+[ProjectLog]
+Days=1
+D1=18-06-2021
+D1_L=2
+D1_L1=[78211]Stopped Editing.
+TotalEdit=4
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L2=[79284]Project Closed.

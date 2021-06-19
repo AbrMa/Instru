@@ -1,0 +1,172 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 strtok.save
+022     @TRIS_C
+023-026 atan2.y
+023-026 MAIN.distancia
+027-02A atan2.x
+027-02A MAIN.voltajeTemperatura
+02B-02E MAIN.temperatura
+02B-02E atan2.z
+02F-032 MAIN.voltajeHS
+02F.0   atan2.sign
+030     atan2.quad
+033-036 MAIN.HS
+037-03A MAIN.tiempo
+03B-03C MAIN.duty
+03D-03E MAIN.LSB
+03F     MAIN.Timer2
+040     MAIN.poscaler
+041     @delay_ms1.P1
+041-044 floor.x
+041     MAIN.@SCRATCH1
+041     @PSTRINGC7_9600_62_63.@SCRATCH1
+042     MAIN.@SCRATCH2
+042     @PSTRINGC7_9600_62_63.@SCRATCH2
+043     MAIN.@SCRATCH3
+043     @PSTRINGC7_9600_62_63.@SCRATCH3
+044     MAIN.@SCRATCH4
+044     @PSTRINGC7_9600_62_63.@SCRATCH4
+045     @PSTRINGCN7_9600_62_63.P1
+045-048 @PRINTF_L32D_9600_62_63FPFPF.P2
+045-048 CEIL_FLOOR.x
+045-048 @DIVFF.P1
+046     @PSTRINGCN7_9600_62_63.@SCRATCH1
+047     @PSTRINGCN7_9600_62_63.@SCRATCH2
+048     @PSTRINGCN7_9600_62_63.@SCRATCH3
+049-04C @DIVFF.P1
+049     @PRINTF_L32D_9600_62_63FPFPF.P2
+049     CEIL_FLOOR.n
+049     @PSTRINGCN7_9600_62_63.@SCRATCH4
+04A-04D CEIL_FLOOR.y
+04A     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+04B     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+04C     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+04D     @DIVFF.@SCRATCH1
+04D     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+04E-051 CEIL_FLOOR.res
+04E     @DIVFF.@SCRATCH2
+04E     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+04F     @DIVFF.@SCRATCH3
+04F     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+050     @DIVFF.@SCRATCH4
+050     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+051     @DIVFF.@SCRATCH5
+051     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+052-055 @DIV3232.P1
+052-053 CEIL_FLOOR.l
+052-055 @FTOSD.P1
+052     @DIVFF.@SCRATCH6
+054.0   CEIL_FLOOR.s
+055-058 @FLT.P1
+055-058 @MULFF.P2
+055-058 @SFTOI.P3
+055     CEIL_FLOOR.@SCRATCH1
+056-059 @DIV3232.P1
+056     CEIL_FLOOR.@SCRATCH2
+056     @FTOSD.@SCRATCH1
+057     CEIL_FLOOR.@SCRATCH3
+058     CEIL_FLOOR.@SCRATCH4
+059-05C @MULFF.P1
+059-05C @ADDFF.P2
+059-05A @ITOF.P3
+059-05C @FLT.P4
+05A     @DIV3232.@SCRATCH1
+05B     @DIV3232.@SCRATCH2
+05C     @DIV3232.@SCRATCH3
+05D-060 @ADDFF.P1
+05D     @FLT.@SCRATCH1
+05D     @MULFF.@SCRATCH1
+05D     @DIV3232.@SCRATCH4
+05E     @FLT.@SCRATCH2
+05E     @MULFF.@SCRATCH2
+05E     @DIV3232.@SCRATCH5
+05F     @MULFF.@SCRATCH3
+060     @MULFF.@SCRATCH4
+061     @MULFF.@SCRATCH5
+061     @ADDFF.@SCRATCH1
+062     @ADDFF.@SCRATCH2
+063     @ADDFF.@SCRATCH3
+064     @ADDFF.@SCRATCH4
+065     @ADDFF.@SCRATCH5
+066     @ADDFF.@SCRATCH6
+067     @ADDFF.@SCRATCH7
+068     @ADDFF.@SCRATCH8
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const875.call
+000015  @const877.call
+000022  @const888.call
+000030  @const889.call
+00003C  @const890.call
+000047  @PSTRINGC7_9600_62_63
+0000A1  @delay_ms1
+0000B6  @ITOF
+0000D3  @MULFF
+000148  @DIVFF
+000212  @FLT
+000251  @SFTOI
+000270  @ADDFF
+0003B1  floor
+0003BA  CEIL_FLOOR
+00054D  @PSTRINGCN7_9600_62_63
+0005A6  @DIV3232
+0005F5  @PRINTF_L32D_9600_62_63FPFPF
+00061C  @FTOSD
+000800  @cinit1
+000800  MAIN
+000814  @cinit2
+
+Project Directory:
+    C:\Users\p_pao\Downloads\Instru-main(2)\Instru-main\Proyecto final\c\
+
+Project Files:
+    final.c                                                 [18-jun.-21 21:38  CRC=717EB26B]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f877a.h [18-abr.-14 16:56  CRC=4F277C97]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h [31-jul.-07 13:24  CRC=4E4534F4]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h [10-abr.-14 09:04  CRC=662B2714]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h [16-jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h [03-ene.-08 13:55  CRC=2D1F019F]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-sep.-12 11:35  CRC=546412C9]
+
+Source signature=D47A9EA7
+
+Units:
+    final (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   final.xsym
+    Errors:      final.err
+    Ext Symbols: final.esym
+    INHX8:       final.hex
+    Symbols:     final.sym
+    List:        final.lst
+    Debug/COFF:  final.cof
+    Project:     final.ccspjt
+    Call Tree:   final.tre
+    Statistics:  final.STA
