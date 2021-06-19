@@ -31,21 +31,23 @@ void main () {
       printf("-------------------------------\r\n");
       //Temperatura
       set_adc_channel(1);
-      delay_us(10);
+      delay_ms(10);
       LSB = read_adc();
       voltajeTemperatura = (LSB * 5.0) / 1023.0;
       temperatura = 20.0 * voltajeTemperatura;
-      printf("Temperatura %2.2f \r\n", floor(temperatura));
+      printf("[Temperatura] -> %2.2f \r\n", floor(temperatura));
 
       //Humedad
       set_adc_channel(0);
-      delay_us(10);
+      delay_ms(10);
       LSB = read_adc();
       voltajeHS = (LSB * 5.0) / 1023.0;
       HS = voltajeHS * (85.0/4.9) + 10;
-      printf("Porciento HS %2.2f \r\n", HS);
+      printf("[Porciento HS] -> %2.2f \r\n", HS);
 
+      delay_ms(10);
       //US
+      
       set_pwm1_duty(duty);
 
       output_high(trigger);
@@ -59,20 +61,23 @@ void main () {
       tiempo=get_timer1();
       distancia=(tiempo/2)*(.0343);
 
-      printf("Distancia =%f cm\r\n", distancia);
-      printf("Tiempo =%f seg\r\n", tiempo);
+      printf("\r Distancia =%f cm" , distancia);
+      printf("\r Tiempo =%f seg", tiempo);
 
-      delay_us(10);
+      delay_ms(500);
 
-      if (distancia<= (3.5)) {
+      if (distancia<= (3.5))
+      {
          duty=0;
       }
-      else if ( distancia>=331) {
+      else if ( distancia>=331)
+      {
          duty=331*3;
       }
-      else {
+      else 
+      {
          duty=distancia*3;
       }
-      delay_us(10);
+      delay_ms(200);
    }
 }

@@ -31,7 +31,7 @@ void main () {
       printf("-------------------------------\r\n");
       //Temperatura
       set_adc_channel(1);
-      delay_us(10);
+      delay_ms(100);
       LSB = read_adc();
       voltajeTemperatura = (LSB * 5.0) / 1023.0;
       temperatura = 20.0 * voltajeTemperatura;
@@ -39,7 +39,7 @@ void main () {
 
       //Humedad
       set_adc_channel(0);
-      delay_us(10);
+      delay_ms(100);
       LSB = read_adc();
       voltajeHS = (LSB * 5.0) / 1023.0;
       HS = voltajeHS * (85.0/4.9) + 10;
@@ -62,8 +62,8 @@ void main () {
       printf("[Distancia] -> %f cm\r\n", distancia);
       printf("[Tiempo] -> %f seg\r\n", tiempo);
 
-      delay_us(10);
-
+      delay_ms(500);
+      
       if (distancia<= (3.5)) {
          duty=0;
       }
@@ -73,6 +73,6 @@ void main () {
       else {
          duty=distancia*3;
       }
-      delay_us(10);
+      delay_ms(200);
    }
 }
